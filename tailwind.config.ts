@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+/* eslint-disable @typescript-eslint/no-require-imports */
+import { type Config } from "tailwindcss";
 
 export default {
   content: [
@@ -25,5 +26,11 @@ export default {
       padding: "2rem",
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/container-queries"),
+    require("tailwindcss-text-rendering"),
+  ],
 } satisfies Config;

@@ -1,3 +1,4 @@
+import { Header } from "@/__src/components";
 import { appTitle } from "@/__src/shared/libs";
 import { cn } from "@/__src/shared/libs/cn";
 import "@/__src/shared/styles/index.css";
@@ -29,11 +30,15 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         testManukaFont.variable,
         testUntitledFont.variable,
         interTightFont.variable,
-        sofiaSansExtraCondensedFont.variable
+        sofiaSansExtraCondensedFont.variable,
+        "h-full scroll-smooth"
       )}
     >
-      <body className="font-fm-test-untitled">
-        <main> {children}</main>
+      <body className="font-fm-test-untitled font-normal h-full bg-white text-black antialiased">
+        <div className="flex flex-col min-h-full">
+          <Header />
+          <main>{children}</main>
+        </div>
       </body>
     </html>
   );
