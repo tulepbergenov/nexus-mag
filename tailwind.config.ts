@@ -6,7 +6,16 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "fm-test-untitled": ["var(--fm-test-untitled)", "sans-serif"],
+        "fm-test-manuka": ["var(--fm-test-manuka)", "sans-serif"],
+      },
+    },
+    container: {
+      center: true,
+      padding: "2rem",
+    },
   },
   plugins: [],
 } satisfies Config;

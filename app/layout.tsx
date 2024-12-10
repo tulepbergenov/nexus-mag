@@ -1,20 +1,9 @@
 import { appTitle } from "@/__src/shared/libs";
+import { cn } from "@/__src/shared/libs/cn";
 import "@/__src/shared/styles/index.css";
 import { Viewport, type Metadata } from "next";
-import localFont from "next/font/local";
 import { ReactNode } from "react";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { testManukaFont, testUntitledFont } from "./fonts";
 
 export const metadata: Metadata = {
   title: appTitle(),
@@ -29,11 +18,12 @@ export const viewport: Viewport = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={cn(testManukaFont.variable, testUntitledFont.variable)}
+    >
+      <body className="font-fm-test-untitled">
+        <main> {children}</main>
       </body>
     </html>
   );
