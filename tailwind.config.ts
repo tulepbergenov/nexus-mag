@@ -8,8 +8,16 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "fm-test-untitled": ["var(--fm-test-untitled)", "sans-serif"],
-        "fm-test-manuka": ["var(--fm-test-manuka)", "sans-serif"],
+        "fm-test-untitled": [
+          "var(--fm-test-untitled)",
+          "var(--fm-inter-tight)",
+          "sans-serif",
+        ],
+        "fm-test-manuka": [
+          "var(--fm-test-manuka)",
+          "var(--fm-sofia-sans-extra-condensed)",
+          "sans-serif",
+        ],
       },
     },
     container: {

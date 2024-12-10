@@ -1,3 +1,4 @@
+import { Inter_Tight, Sofia_Sans_Extra_Condensed } from "next/font/google";
 import localFont from "next/font/local";
 
 export const testManukaFont = localFont({
@@ -60,4 +61,20 @@ export const testUntitledFont = localFont({
       style: "italic",
     },
   ],
+});
+
+export const interTightFont = Inter_Tight({
+  weight: ["300", "400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--fm-inter-tight",
+});
+
+export const sofiaSansExtraCondensedFont = Sofia_Sans_Extra_Condensed({
+  weight: ["300", "400", "500", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--fm-sofia-sans-extra-condensed",
 });

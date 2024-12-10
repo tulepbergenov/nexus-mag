@@ -3,7 +3,12 @@ import { cn } from "@/__src/shared/libs/cn";
 import "@/__src/shared/styles/index.css";
 import { Viewport, type Metadata } from "next";
 import { ReactNode } from "react";
-import { testManukaFont, testUntitledFont } from "./fonts";
+import {
+  interTightFont,
+  sofiaSansExtraCondensedFont,
+  testManukaFont,
+  testUntitledFont,
+} from "./fonts";
 
 export const metadata: Metadata = {
   title: appTitle(),
@@ -20,7 +25,12 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html
       lang="en"
-      className={cn(testManukaFont.variable, testUntitledFont.variable)}
+      className={cn(
+        testManukaFont.variable,
+        testUntitledFont.variable,
+        interTightFont.variable,
+        sofiaSansExtraCondensedFont.variable
+      )}
     >
       <body className="font-fm-test-untitled">
         <main> {children}</main>
