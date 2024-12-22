@@ -1,7 +1,7 @@
-import { Header } from "@/__src/components";
 import { appTitle } from "@/__src/shared/libs";
 import { cn } from "@/__src/shared/libs/cn";
 import "@/__src/shared/styles/index.css";
+import { HeaderBar } from "@/__src/widgets";
 import { Viewport, type Metadata } from "next";
 import { ReactNode } from "react";
 import {
@@ -35,8 +35,8 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       )}
     >
       <body className="font-fm-test-untitled font-normal h-full bg-white text-black antialiased">
-        <div className="flex flex-col min-h-full">
-          <Header />
+        <div className="flex flex-col min-h-full pb-[200px]">
+          <HeaderBar />
           <main>{children}</main>
         </div>
       </body>
