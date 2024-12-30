@@ -22,7 +22,7 @@ export const LatestArticleList = () => {
             className="group cursor-pointer"
             onClick={() => handleLinkClick(article.link.href)}
           >
-            <div className="aspect-1 rounded-[40px] bg-[#C6C6C6]"></div>
+            <div className="aspect-1 bg-[#C6C6C6]"></div>
             <div className="mt-[12px] grid items-start gap-y-[12px] text-[var(--article-list-item-body-color)] transition-colors duration-300 ease-in-out [--article-list-item-body-color:#050505] md:grid-cols-2 [@media(hover:hover)]:group-hover:[--article-list-item-body-color:#FF0004]">
               <h3 className="order-2 text-[18px] font-bold uppercase leading-[24px] group-active:[--article-list-item-body-color:#FF0004] md:order-1 md:mt-[6px]">
                 {article.title}
