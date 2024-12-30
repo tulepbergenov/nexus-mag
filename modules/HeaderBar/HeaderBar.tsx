@@ -12,9 +12,15 @@ export const HeaderBar = () => {
   const handleToggleMenu = () => {
     const body = document.body;
 
-    setIsOpenMenu((prevIsOpenMenu) => !prevIsOpenMenu);
+    setIsOpenMenu((prevIsOpenMenu) => {
+      if (prevIsOpenMenu) {
+        body.style.overflow = "auto";
+      } else {
+        body.style.overflow = "hidden";
+      }
 
-    body.style.overflow = "hidden";
+      return !prevIsOpenMenu;
+    });
   };
 
   const handleCloseMenu = () => {
