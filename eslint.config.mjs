@@ -1,4 +1,5 @@
 import { FlatCompat } from "@eslint/eslintrc";
+import perfectionist from "eslint-plugin-perfectionist";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -11,6 +12,25 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  {
+    plugins: {
+      perfectionist,
+    },
+    rules: {
+      "perfectionist/sort-jsx-props": [
+        "error",
+        {
+          type: "alphabetical",
+          order: "asc",
+          ignoreCase: true,
+          specialCharacters: "keep",
+          ignorePattern: [],
+          groups: [],
+          customGroups: {},
+        },
+      ],
+    },
+  },
   {
     ignores: ["node_modules/*"],
   },

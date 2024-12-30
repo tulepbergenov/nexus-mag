@@ -39,17 +39,17 @@ export const HeaderBar = () => {
   return (
     <>
       <header
-        ref={headerRef}
         className="fixed left-0 top-0 z-[100] w-full border-b border-b-[#050505] bg-white lg:static lg:z-auto lg:border-none"
+        ref={headerRef}
       >
         <div className="container">
           <div className="flex items-center justify-between py-[14px] lg:py-[30px]">
             <button
-              type="button"
-              className="group relative order-2 flex h-[40px] w-[40px] items-center justify-center lg:hidden"
               aria-label={isOpenMenu ? "Close menu" : "Open menu"}
-              title={isOpenMenu ? "Close menu" : "Open menu"}
+              className="group relative order-2 flex h-[40px] w-[40px] items-center justify-center lg:hidden"
               onClick={handleToggleMenu}
+              title={isOpenMenu ? "Close menu" : "Open menu"}
+              type="button"
             >
               <div
                 className={cn(
@@ -77,8 +77,8 @@ export const HeaderBar = () => {
               </div>
             </button>
             <Link
-              href="/"
               className="relative order-1 inline-block h-[40px] w-[94px] overflow-hidden font-test-manuka font-semibold lg:h-[70px] lg:w-[154px]"
+              href="/"
               onClick={handleCloseMenu}
             >
               <span className="absolute inset-0 -translate-y-[14px] text-[60px] leading-none lg:-translate-y-[24px] lg:text-[100px]">
@@ -90,8 +90,8 @@ export const HeaderBar = () => {
                 {NAV_ITEMS.map((navItem) => (
                   <li key={navItem.href}>
                     <Link
-                      href={navItem.href}
                       className="inline-block uppercase transition-colors duration-300 ease-in-out active:text-[#FF0004] [@media(hover:hover)]:hover:text-[#FF0004]"
+                      href={navItem.href}
                     >
                       {navItem.label}
                     </Link>
@@ -100,8 +100,8 @@ export const HeaderBar = () => {
               </ul>
             </nav>
             <Link
-              href={"https://www.instagram.com/nexus_magg"}
               className="order-3 hidden items-center justify-center transition-colors duration-300 ease-in-out active:text-[#FF0004] lg:flex [@media(hover:hover)]:hover:text-[#FF0004]"
+              href={"https://www.instagram.com/nexus_magg"}
               target="_blank"
             >
               <FaInstagram className="h-auto w-[40px]" />
@@ -124,8 +124,8 @@ export const HeaderBar = () => {
             {NAV_ITEMS.map((navItem) => (
               <li key={navItem.href}>
                 <Link
-                  href={navItem.href}
                   className="inline-block text-[30px] uppercase leading-none transition-colors duration-300 ease-in-out active:text-[#FF0004] [@media(hover:hover)]:hover:text-[#FF0004]"
+                  href={navItem.href}
                 >
                   {navItem.label}
                 </Link>

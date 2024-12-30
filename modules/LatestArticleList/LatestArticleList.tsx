@@ -18,8 +18,8 @@ export const LatestArticleList = () => {
       <div className="mt-[24px] grid gap-[20px] md:grid-cols-2 lg:grid-cols-3">
         {ARTICLE_LIST_DATA.map((article, i) => (
           <article
-            key={i}
             className="group cursor-pointer"
+            key={i}
             onClick={() => handleLinkClick(article.link.href)}
           >
             <div className="aspect-1 bg-[#C6C6C6]"></div>
@@ -31,8 +31,8 @@ export const LatestArticleList = () => {
                 {article.description}
               </p>
               <Link
-                href={article.link.href}
                 className="order-1 hidden w-fit items-center justify-center rounded-[32px] border border-[var(--article-list-item-body-color)] px-[20px] py-[4px] text-center text-[18px] font-bold uppercase leading-[24px] md:order-2 md:ml-auto md:flex"
+                href={article.link.href}
               >
                 {article.link.label}
               </Link>

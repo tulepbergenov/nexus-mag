@@ -79,7 +79,7 @@ export const CursorPursuer = () => {
 
   return (
     <div className="pointer-events-none fixed left-0 top-0 z-[9999] h-svh w-full overflow-clip [@media(hover:none)]:hidden">
-      <div ref={circleRef} className="absolute">
+      <div className="absolute" ref={circleRef}>
         <div
           className={cn(
             "size-[50px] rounded-full border-[2px] border-[#FF0004] transition-transform duration-300 ease-in-out",

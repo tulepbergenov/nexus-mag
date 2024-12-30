@@ -33,7 +33,6 @@ const RootLayout = ({
 }>) => {
   return (
     <html
-      lang="en"
       className={cn(
         testManukaFont.variable,
         testUntitledFont.variable,
@@ -41,6 +40,7 @@ const RootLayout = ({
         sofiaSansExtraCondensedFont.variable,
         "h-full !scroll-smooth [--nexus-header-height:80px]",
       )}
+      lang="en"
       suppressHydrationWarning
     >
       <body className="h-full bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-[#050505] antialiased rendering-speed">
