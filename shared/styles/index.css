@@ -6,4 +6,22 @@
   html {
     color-scheme: light;
   }
+
+  body::-webkit-scrollbar {
+    @apply w-[8px];
+  }
+
+  body::-webkit-scrollbar-thumb {
+    @apply rounded-[4px] bg-[#FF0004];
+  }
+
+  body::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+}
+
+@layer components {
+  .container {
+    @apply xl:max-w-screen-xl;
+  }
 }

@@ -1,7 +1,10 @@
+import { CursorPursuer, SkipLink } from "@/components";
+import { HeaderBar } from "@/modules";
 import { appTitle, cn } from "@/shared/libs";
 import "@/shared/styles/index.css";
 import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
+import { Providers } from "./__providers";
 import {
   interTightFont,
   sofiaSansExtraCondensedFont,
@@ -17,7 +20,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: "light",
-  themeColor: "#000000",
+  themeColor: "#050505",
 };
 
 const RootLayout = ({
@@ -33,13 +36,24 @@ const RootLayout = ({
         testUntitledFont.variable,
         interTightFont.variable,
         sofiaSansExtraCondensedFont.variable,
-        "h-full scroll-smooth",
+        "h-full !scroll-smooth [--nexus-header-height:80px]",
       )}
+      suppressHydrationWarning
     >
-      <body className="h-full bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-black antialiased rendering-speed">
-        <div className="flex min-h-full flex-col overflow-clip">
-          <main className="flex-auto">{children}</main>
-        </div>
+      <body className="h-full bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-[#050505] antialiased rendering-speed">
+        <Providers>
+          <div className="flex min-h-full flex-col overflow-clip pb-[100px]">
+            <SkipLink />
+            <HeaderBar />
+            <main
+              className="flex-auto pt-[var(--nexus-header-height)] lg:pt-0"
+              id="main"
+            >
+              {children}
+            </main>
+          </div>
+          <CursorPursuer />
+        </Providers>
       </body>
     </html>
   );
