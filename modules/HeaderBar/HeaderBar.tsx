@@ -2,7 +2,7 @@
 
 import { cn } from "@/shared/libs";
 import Link from "next/link";
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useLayoutEffect, useRef, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
 
 export const HeaderBar = () => {
@@ -35,6 +35,24 @@ export const HeaderBar = () => {
       behavior: "smooth",
     });
   };
+
+  useLayoutEffect(() => {
+    const updateHeaderHeight = () => {
+      if (headerRef.current) {
+        document.documentElement.style.setProperty(
+          "--nexus-header-height",
+          `${headerRef.current.offsetHeight}px`,
+        );
+      }
+    };
+
+    updateHeaderHeight();
+
+    window.addEventListener("resize", updateHeaderHeight);
+    return () => {
+      window.removeEventListener("resize", updateHeaderHeight);
+    };
+  }, []);
 
   return (
     <>
@@ -120,7 +138,7 @@ export const HeaderBar = () => {
         )}
       >
         <div className="container">
-          <ul className="ovreflow-y-auto flex flex-col gap-y-[30px] pt-[100px]">
+          <ul className="ovreflow-y-auto flex flex-col gap-y-[30px] pt-[calc(var(--nexus-header-height)+20px)]">
             {NAV_ITEMS.map((navItem) => (
               <li key={navItem.href}>
                 <Link

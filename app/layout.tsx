@@ -43,7 +43,7 @@ const RootLayout = ({
         testUntitledFont.variable,
         interTightFont.variable,
         sofiaSansExtraCondensedFont.variable,
-        "h-full !scroll-smooth [--nexus-header-height:80px]",
+        "h-full !scroll-smooth [--nexus-header-height:69px]",
       )}
       lang="en"
       suppressHydrationWarning
