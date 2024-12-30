@@ -33,10 +33,10 @@ const RootLayout = ({
         testUntitledFont.variable,
         interTightFont.variable,
         sofiaSansExtraCondensedFont.variable,
-        "h-full scroll-smooth"
+        "h-full scroll-smooth",
       )}
     >
-      <body className="font-test-untitled h-full antialiased rendering-speed bg-white text-black text-[16px] leading-[21px] font-normal">
+      <body className="h-full bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-black antialiased rendering-speed">
         <div className="flex min-h-full flex-col overflow-clip">
           <main className="flex-auto">{children}</main>
         </div>
