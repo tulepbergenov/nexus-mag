@@ -35,7 +35,7 @@ export const HeaderBar = () => {
     <>
       <header
         ref={headerRef}
-        className="fixed left-0 top-0 w-full border-b border-b-[#050505] bg-white lg:static lg:border-none"
+        className="fixed left-0 top-0 z-[100] w-full border-b border-b-[#050505] bg-white lg:static lg:z-auto lg:border-none"
       >
         <div className="container">
           <div className="grid grid-cols-3 items-center py-[14px] lg:flex lg:justify-between lg:py-[30px]">
@@ -116,7 +116,7 @@ export const HeaderBar = () => {
       </header>
       <div
         className={cn(
-          "fixed left-0 top-[var(--nexus-header-height)] z-[1000] h-[calc(100svh-var(--nexus-header-height))] w-full bg-white transition-opacity duration-300 ease-in-out lg:hidden",
+          "fixed left-0 top-0 z-[90] h-svh w-full bg-white transition-opacity duration-300 ease-in-out lg:hidden",
           {
             ["pointer-events-auto opacity-100"]: isOpenMenu,
             ["pointer-events-none opacity-0"]: !isOpenMenu,
@@ -124,7 +124,7 @@ export const HeaderBar = () => {
         )}
       >
         <div className="container">
-          <ul className="ovreflow-y-auto flex flex-col gap-y-[30px] pt-[20px]">
+          <ul className="ovreflow-y-auto flex flex-col gap-y-[30px] pt-[100px]">
             {NAV_ITEMS.map((navItem) => (
               <li key={navItem.href}>
                 <Link

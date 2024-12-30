@@ -32,7 +32,7 @@ export const LatestArticleList = () => {
               </p>
               <Link
                 href={article.link.href}
-                className="order-1 flex w-fit items-center justify-center rounded-[32px] border border-[var(--article-list-item-body-color)] px-[20px] py-[4px] text-center text-[18px] font-bold uppercase leading-[24px] md:order-2 md:ml-auto"
+                className="order-1 hidden w-fit items-center justify-center rounded-[32px] border border-[var(--article-list-item-body-color)] px-[20px] py-[4px] text-center text-[18px] font-bold uppercase leading-[24px] md:order-2 md:ml-auto md:flex"
               >
                 {article.link.label}
               </Link>
