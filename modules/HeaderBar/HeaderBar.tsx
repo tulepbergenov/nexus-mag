@@ -1,9 +1,9 @@
 "use client";
 
 import { cn } from "@/shared/libs";
-import Image from "next/image";
 import Link from "next/link";
 import { ReactNode, useRef, useState } from "react";
+import { FaInstagram } from "react-icons/fa";
 
 export const HeaderBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -99,23 +99,14 @@ export const HeaderBar = () => {
                 ))}
               </ul>
             </nav>
-            <div className="relative order-3 ml-auto hidden items-center justify-center transition-opacity duration-300 ease-in-out active:opacity-60 lg:m-0 lg:flex [@media(hover:hover)]:hover:opacity-60">
-              <Image
-                src="/instagram-logo.svg"
-                alt="Instagram"
-                width={50}
-                height={50}
-                priority
-                className="size-[40px] lg:size-[50px]"
-              />
-              <Link
-                href={"https://www.instagram.com/nexus_magg"}
-                className="absolute inset-0"
-                target="_blank"
-              >
-                <span className="sr-only">Nexus Magazine Instagram</span>
-              </Link>
-            </div>
+            <Link
+              href={"https://www.instagram.com/nexus_magg"}
+              className="order-3 hidden items-center justify-center transition-colors duration-300 ease-in-out active:text-[#FF0004] lg:flex [@media(hover:hover)]:hover:text-[#FF0004]"
+              target="_blank"
+            >
+              <FaInstagram className="h-auto w-[40px]" />
+              <span className="sr-only">Nexus Magazine Instagram</span>
+            </Link>
           </div>
         </div>
       </header>

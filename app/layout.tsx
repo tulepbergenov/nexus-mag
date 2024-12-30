@@ -1,4 +1,4 @@
-import { CursorPursuer, SkipLink } from "@/components";
+import { CursorPursuer, FixedInstagramButton, SkipLink } from "@/components";
 import { HeaderBar } from "@/modules";
 import { appTitle, cn } from "@/shared/libs";
 import "@/shared/styles/index.css";
@@ -56,6 +56,7 @@ const RootLayout = ({
             </main>
           </div>
           <CursorPursuer />
+          <FixedInstagramButton />
         </Providers>
       </body>
     </html>
