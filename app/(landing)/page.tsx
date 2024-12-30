@@ -5,7 +5,7 @@ const HomePage = () => {
     <>
       <section>
         <header className="container">
-          <h1>Hello World</h1>
+          <h1>Exploring the intersection of humanity and AI</h1>
           <div className="flex flex-col gap-y-[20px]">
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem ut

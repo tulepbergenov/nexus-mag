@@ -29,6 +29,11 @@ export const HeaderBar = () => {
     setIsOpenMenu(false);
 
     body.style.overflow = "auto";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -38,12 +43,12 @@ export const HeaderBar = () => {
         className="fixed left-0 top-0 z-[100] w-full border-b border-b-[#050505] bg-white lg:static lg:z-auto lg:border-none"
       >
         <div className="container">
-          <div className="grid grid-cols-3 items-center py-[14px] lg:flex lg:justify-between lg:py-[30px]">
+          <div className="flex items-center justify-between py-[14px] lg:py-[30px]">
             <button
               type="button"
-              className="group relative flex h-[40px] w-[40px] items-center justify-center lg:hidden"
-              aria-label="Open menu"
-              title="Open menu"
+              className="group relative order-2 flex h-[40px] w-[40px] items-center justify-center lg:hidden"
+              aria-label={isOpenMenu ? "Close menu" : "Open menu"}
+              title={isOpenMenu ? "Close menu" : "Open menu"}
               onClick={handleToggleMenu}
             >
               <div
@@ -60,7 +65,7 @@ export const HeaderBar = () => {
               </div>
               <div
                 className={cn(
-                  "absolute left-2/4 top-[18px] flex h-[12px] w-[40px] -translate-x-2/4 flex-col justify-between transition-transform duration-300 ease-in-out",
+                  "absolute left-[2px] top-[18px] flex h-[12px] w-[40px] flex-col justify-between transition-transform duration-300 ease-in-out",
                   {
                     ["scale-100"]: isOpenMenu,
                     ["scale-0"]: !isOpenMenu,
@@ -73,7 +78,7 @@ export const HeaderBar = () => {
             </button>
             <Link
               href="/"
-              className="relative order-1 mx-auto inline-block h-[40px] w-[94px] overflow-hidden font-test-manuka font-semibold lg:m-0 lg:h-[70px] lg:w-[154px]"
+              className="relative order-1 inline-block h-[40px] w-[94px] overflow-hidden font-test-manuka font-semibold lg:h-[70px] lg:w-[154px]"
               onClick={handleCloseMenu}
             >
               <span className="absolute inset-0 -translate-y-[14px] text-[60px] leading-none lg:-translate-y-[24px] lg:text-[100px]">
@@ -94,7 +99,7 @@ export const HeaderBar = () => {
                 ))}
               </ul>
             </nav>
-            <div className="relative order-3 ml-auto flex items-center justify-center transition-opacity duration-300 ease-in-out active:opacity-60 lg:m-0 [@media(hover:hover)]:hover:opacity-60">
+            <div className="relative order-3 ml-auto hidden items-center justify-center transition-opacity duration-300 ease-in-out active:opacity-60 lg:m-0 lg:flex [@media(hover:hover)]:hover:opacity-60">
               <Image
                 src="/instagram-logo.svg"
                 alt="Instagram"
@@ -105,11 +110,11 @@ export const HeaderBar = () => {
               />
               <Link
                 href={"https://www.instagram.com/nexus_magg"}
-                title="Nexus Magazine Instagram"
-                aria-label="Nexus Magazine Instagram"
                 className="absolute inset-0"
                 target="_blank"
-              ></Link>
+              >
+                <span className="sr-only">Nexus Magazine Instagram</span>
+              </Link>
             </div>
           </div>
         </div>

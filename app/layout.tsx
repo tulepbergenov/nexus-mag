@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: appTitle(),
   description:
     "Contemporary online publication exploring the intersection of humanity and AI",
+  alternates: {
+    canonical: process.env.NEXT_PUBLIC_CANONICAL_URL,
+  },
 };
 
 export const viewport: Viewport = {
