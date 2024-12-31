@@ -48,7 +48,7 @@ const RootLayout = ({
       lang="en"
       suppressHydrationWarning
     >
-      <body className="h-full bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-[#050505] antialiased rendering-speed">
+      <body className="h-full text-balance bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-[#050505] antialiased rendering-speed">
         <Providers>
           <div className="flex min-h-full flex-col overflow-clip pb-[100px]">
             <SkipLink />

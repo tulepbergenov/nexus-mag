@@ -7,6 +7,10 @@
     color-scheme: light;
   }
 
+  *::selection {
+    @apply bg-[#FF0004] text-white;
+  }
+
   body::-webkit-scrollbar {
     @apply w-[8px];
   }
