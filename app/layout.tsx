@@ -1,3 +1,4 @@
+import { Providers } from "@/app/providers";
 import {
   BackToTopButton,
   CursorPursuer,
@@ -9,7 +10,6 @@ import { appTitle, cn } from "@/shared/libs";
 import "@/shared/styles/index.css";
 import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
-import { Providers } from "./__providers";
 import {
   interTightFont,
   sofiaSansExtraCondensedFont,
