@@ -49,6 +49,7 @@ export const HeaderBar = () => {
     updateHeaderHeight();
 
     window.addEventListener("resize", updateHeaderHeight);
+
     return () => {
       window.removeEventListener("resize", updateHeaderHeight);
     };
