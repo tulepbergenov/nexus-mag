@@ -1,4 +1,3 @@
-export * from "./BackToTopButton";
+export * from "./ArticlesList";
 export * from "./CursorPursuer";
-export * from "./FixedInstagramButton";
 export * from "./SkipLink";

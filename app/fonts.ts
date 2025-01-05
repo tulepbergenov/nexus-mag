@@ -60,6 +60,11 @@ export const testUntitledFont = localFont({
       weight: "300",
       style: "italic",
     },
+    {
+      path: "./fonts/test-untitled-sans-medium.woff2",
+      weight: "500",
+      style: "normal",
+    },
   ],
 });
 

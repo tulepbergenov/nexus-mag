@@ -1,11 +1,6 @@
 import { Providers } from "@/app/providers";
-import {
-  BackToTopButton,
-  CursorPursuer,
-  FixedInstagramButton,
-  SkipLink,
-} from "@/components";
-import { HeaderBar } from "@/modules";
+import { CursorPursuer, SkipLink } from "@/components";
+import { FooterBar, HeaderBar } from "@/modules";
 import { appTitle, cn } from "@/shared/libs";
 import "@/shared/styles/index.css";
 import type { Metadata, Viewport } from "next";
@@ -43,7 +38,7 @@ const RootLayout = ({
         testUntitledFont.variable,
         interTightFont.variable,
         sofiaSansExtraCondensedFont.variable,
-        "h-full !scroll-smooth [--nexus-header-height:69px]",
+        "h-full !scroll-smooth",
       )}
       lang="en"
       suppressHydrationWarning
@@ -53,16 +48,12 @@ const RootLayout = ({
           <div className="flex min-h-full flex-col overflow-clip pb-[100px]">
             <SkipLink />
             <HeaderBar />
-            <main
-              className="flex-auto pt-[var(--nexus-header-height)] lg:pt-0"
-              id="main"
-            >
+            <main className="flex-auto" id="main">
               {children}
             </main>
+            <FooterBar />
           </div>
           <CursorPursuer />
-          <FixedInstagramButton />
-          <BackToTopButton />
         </Providers>
       </body>
     </html>

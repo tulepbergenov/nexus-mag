@@ -16,7 +16,7 @@
   }
 
   body::-webkit-scrollbar-thumb {
-    @apply rounded-[4px] bg-[#FF0004];
+    @apply bg-[#FF0004];
   }
 
   body::-webkit-scrollbar-track {
@@ -26,6 +26,6 @@
 
 @layer components {
   .container {
-    @apply xl:max-w-screen-xl;
+    @apply md:max-w-screen-md;
   }
 }
