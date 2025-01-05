@@ -16,32 +16,32 @@ const SearchResult = ({ className }: { className?: string }) => {
         {
           title: "lorem ipsum",
           category: "art & literature",
-          href: "/article-1",
+          href: "/article",
         },
         {
           title: "lorem ipsum",
           category: "art & literature",
-          href: "/article-2",
+          href: "/article",
         },
         {
           title: "lorem ipsum",
           category: "art & literature",
-          href: "/article-3",
+          href: "/article",
         },
         {
           title: "lorem ipsum",
           category: "art & literature",
-          href: "/article-4",
+          href: "/article",
         },
         {
           title: "lorem ipsum",
           category: "art & literature",
-          href: "/article-5",
+          href: "/article",
         },
         {
           title: "lorem ipsum",
           category: "art & literature",
-          href: "/article-6",
+          href: "/article",
         },
       ]}
       className={className}

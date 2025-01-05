@@ -8,7 +8,7 @@ const ArticlePage = () => {
       <div className="container">
         <div>
           <header className="flex flex-col items-center text-center">
-            <h1 className="text-center text-[24px] font-medium uppercase leading-none -tracking-[4px] md:text-[32px] md:-tracking-[3px]">
+            <h1 className="text-center text-[24px] font-medium uppercase leading-none -tracking-[2px] md:text-[32px] md:-tracking-[3px]">
               <Balancer>
                 Radical futures: How Gen Z Is Fighting Inequality in a Broken
                 World
@@ -161,27 +161,27 @@ const ArticlePage = () => {
               {
                 title: "lorem ipsum",
                 category: "art & literature",
-                href: "/article-2",
+                href: "/article",
               },
               {
                 title: "lorem ipsum",
                 category: "art & literature",
-                href: "/article-3",
+                href: "/article",
               },
               {
                 title: "lorem ipsum",
                 category: "art & literature",
-                href: "/article-4",
+                href: "/article",
               },
               {
                 title: "lorem ipsum",
                 category: "art & literature",
-                href: "/article-5",
+                href: "/article",
               },
               {
                 title: "lorem ipsum",
                 category: "art & literature",
-                href: "/article-6",
+                href: "/article",
               },
             ]}
             className="mt-[48px]"

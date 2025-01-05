@@ -24,7 +24,7 @@ export const ArticlesList = ({
   return (
     <div className={cn("flex flex-col gap-y-[24px]", className)}>
       {showReadNext && (
-        <h2 className="text-[24px] font-medium uppercase leading-none -tracking-[4px] md:text-[32px] md:-tracking-[3px]">
+        <h2 className="text-[24px] font-medium uppercase leading-none -tracking-[2px] md:text-[32px] md:-tracking-[3px]">
           read next
         </h2>
       )}
