@@ -4,7 +4,8 @@ import { NexusLink } from "@/shared/ui-kit";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
-import { ReactNode, useState } from "react";
+import type { ReactNode } from "react";
+import { useState } from "react";
 
 const MENU_LINKS: {
   label: ReactNode;

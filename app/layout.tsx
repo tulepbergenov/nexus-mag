@@ -4,7 +4,7 @@ import { FooterBar, HeaderBar } from "@/modules";
 import { appTitle, cn } from "@/shared/libs";
 import "@/shared/styles/index.css";
 import type { Metadata, Viewport } from "next";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import {
   interTightFont,
   sofiaSansExtraCondensedFont,

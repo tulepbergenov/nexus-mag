@@ -17,6 +17,7 @@ const eslintConfig = [
       perfectionist,
     },
     rules: {
+      "@typescript-eslint/consistent-type-imports": "error",
       "perfectionist/sort-jsx-props": [
         "error",
         {

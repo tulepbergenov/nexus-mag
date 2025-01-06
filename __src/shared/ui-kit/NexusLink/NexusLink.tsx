@@ -3,7 +3,7 @@
 import NextLink from "next/link";
 import { usePathname } from "next/navigation";
 import { forwardRef } from "react";
-import { NexusLinkType } from "./NexusLink.type";
+import type { NexusLinkType } from "./NexusLink.type";
 
 export const NexusLink = forwardRef<HTMLAnchorElement, NexusLinkType>(
   (props, ref) => {
