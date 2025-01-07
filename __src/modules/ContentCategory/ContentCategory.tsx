@@ -1,5 +1,6 @@
 "use client";
 
+import { cn } from "@/shared/libs";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -29,7 +30,14 @@ export const ContentCategory = ({
       }}
     >
       <header className="py-[24px] sm:py-[48px]">
-        <h1 className="text-center text-xl font-medium uppercase -tracking-[0.1em] sm:text-start sm:text-4xl">
+        <h1
+          className={cn(
+            "text-center text-xl font-medium uppercase -tracking-[0.1em] sm:text-start sm:text-4xl",
+            {
+              ["dark:text-white"]: color === "#050505",
+            },
+          )}
+        >
           {title}
         </h1>
       </header>
@@ -54,7 +62,14 @@ export const ContentCategory = ({
                 width={464}
               />
             </div>
-            <h2 className="mt-[12px] line-clamp-3 text-3xl font-medium uppercase -tracking-[0.1em]">
+            <h2
+              className={cn(
+                "mt-[12px] line-clamp-3 text-3xl font-medium uppercase -tracking-[0.1em]",
+                {
+                  ["dark:text-white"]: color === "#050505",
+                },
+              )}
+            >
               {article.title}
             </h2>
           </article>
