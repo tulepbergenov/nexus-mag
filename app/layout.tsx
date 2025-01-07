@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  colorScheme: "light",
+  colorScheme: "light dark",
   themeColor: "#050505",
 };
 
@@ -38,7 +38,7 @@ const RootLayout = ({
         testUntitledFont.variable,
         interTightFont.variable,
         sofiaSansExtraCondensedFont.variable,
-        "h-full !scroll-smooth [color-scheme:light] [&_*::selection]:bg-[#FF0004] [&_*::selection]:text-white",
+        "h-full !scroll-smooth [color-scheme:light_dark] [&_*::selection]:bg-[#FF0004] [&_*::selection]:text-white",
       )}
       lang="en"
       suppressHydrationWarning
