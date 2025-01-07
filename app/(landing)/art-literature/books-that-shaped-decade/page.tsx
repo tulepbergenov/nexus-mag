@@ -7,10 +7,8 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: appTitle("The Books That Shaped a Decade: Stories That Stay with You"),
-  description:
-    "Contemporary online publication exploring the intersection of humanity and AI",
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_CANONICAL_URL}/art-literature/books-that-shaped-decade`,
+    canonical: `${process.env.NEXT_PUBLIC_CANONICAL_URL}${Categories.ArtLiterature}/books-that-shaped-decade`,
   },
 };
 
