@@ -39,14 +39,19 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              What is literature, if not the mirror and maker of society? Across
-              centuries, words have documented revolutions, sparked ideas, and
-              redefined humanity’s place in the world. But in today’s fragmented
-              reality—where social media scrolls dominate and AI threatens to
-              outwrite humans—what role does literature play? More importantly,
-              where is it heading?
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                What is literature, if not the mirror and maker of society?
+                Across centuries, words have documented revolutions, sparked
+                ideas, and redefined humanity’s place in the world. But in
+                today’s fragmented reality—where social media scrolls dominate
+                and AI threatens to outwrite humans—what role does literature
+                play? More importantly, where is it heading?
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                15 December 2024
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 The Power of the Written Word

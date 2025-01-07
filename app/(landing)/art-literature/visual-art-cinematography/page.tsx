@@ -41,16 +41,21 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              Cinema has always been influenced by visual art. But beyond the
-              usual nods to classics like Vermeer or Hopper, there’s a more
-              chaotic, experimental side to the relationship between art and
-              film. It’s the spaces where the surreal, the unsettling, and the
-              provocative meet that create some of the most unforgettable
-              cinematic experiences. From disorienting dreamscapes to fragmented
-              narratives, here’s a look at how visual art’s darker, edgier side
-              has shaped some of the most boundary-pushing films.
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                Cinema has always been influenced by visual art. But beyond the
+                usual nods to classics like Vermeer or Hopper, there’s a more
+                chaotic, experimental side to the relationship between art and
+                film. It’s the spaces where the surreal, the unsettling, and the
+                provocative meet that create some of the most unforgettable
+                cinematic experiences. From disorienting dreamscapes to
+                fragmented narratives, here’s a look at how visual art’s darker,
+                edgier side has shaped some of the most boundary-pushing films.
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                6 january 2025
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 Francis Bacon’s Grotesque Beauty and the Horror of the Human

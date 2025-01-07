@@ -41,15 +41,20 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              In 2024, nostalgia is everywhere. From reboots of 90s TV shows to
-              fashion trends that recycle the Y2K aesthetic, the past has become
-              a powerful currency. Brands, media, and even political campaigns
-              tap into our collective yearning for “simpler times,” creating a
-              world where the past feels more relevant than the future. But why
-              does nostalgia resonate so strongly in modern society, and what
-              does this say about our collective psyche?
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                In 2024, nostalgia is everywhere. From reboots of 90s TV shows
+                to fashion trends that recycle the Y2K aesthetic, the past has
+                become a powerful currency. Brands, media, and even political
+                campaigns tap into our collective yearning for “simpler times,”
+                creating a world where the past feels more relevant than the
+                future. But why does nostalgia resonate so strongly in modern
+                society, and what does this say about our collective psyche?
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                2 january 2025
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 The Psychology of Nostalgia

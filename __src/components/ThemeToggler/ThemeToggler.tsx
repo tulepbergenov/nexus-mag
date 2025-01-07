@@ -36,7 +36,7 @@ export const ThemeToggler = ({ className }: { className?: string }) => {
         >
           <button
             className={cn(
-              "inline-block px-[4px] py-[2px] font-medium uppercase transition-colors duration-300 ease-in-out",
+              "inline-block px-[4px] py-[2px] font-medium uppercase transition-colors duration-300 ease-in-out active:bg-[#FF0004] active:text-white [@media(hover:hover)]:hover:bg-[#FF0004] [@media(hover:hover)]:hover:text-white",
               {
                 "bg-white text-[#050505]": resolvedTheme === "dark",
               },
@@ -48,7 +48,7 @@ export const ThemeToggler = ({ className }: { className?: string }) => {
           </button>
           <button
             className={cn(
-              "inline-block px-[4px] py-[2px] font-medium uppercase transition-colors duration-300 ease-in-out",
+              "inline-block px-[4px] py-[2px] font-medium uppercase transition-colors duration-300 ease-in-out active:bg-[#FF0004] active:text-white [@media(hover:hover)]:hover:bg-[#FF0004] [@media(hover:hover)]:hover:text-white",
               {
                 "bg-[#050505] text-white": resolvedTheme === "light",
               },

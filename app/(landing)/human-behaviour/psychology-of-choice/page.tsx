@@ -41,17 +41,22 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              In the fast-paced, hyper-connected world of 2024, every decision
-              we make seems loaded with meaning. From selecting what to eat to
-              curating a social media persona, our choices no longer feel
-              entirely our own. External forces like algorithms, societal
-              expectations, and the overwhelming abundance of options influence
-              how we navigate our lives. The psychology of choice has never been
-              more relevant, as it not only affects our mental well-being but
-              also raises questions about autonomy, authenticity, and the human
-              experience.
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                In the fast-paced, hyper-connected world of 2024, every decision
+                we make seems loaded with meaning. From selecting what to eat to
+                curating a social media persona, our choices no longer feel
+                entirely our own. External forces like algorithms, societal
+                expectations, and the overwhelming abundance of options
+                influence how we navigate our lives. The psychology of choice
+                has never been more relevant, as it not only affects our mental
+                well-being but also raises questions about autonomy,
+                authenticity, and the human experience.
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                24 December 2024
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 The Illusion of Choice: Too Many Options

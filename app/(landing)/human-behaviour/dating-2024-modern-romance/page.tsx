@@ -41,15 +41,21 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              Dating has never been simple, but in 2024, it feels more complex
-              than ever. From swiping right to sliding into DMs, the way we
-              meet, connect, and build relationships has fundamentally changed.
-              Technology has streamlined romance, but it’s also introduced new
-              challenges—ghosting, breadcrumbing, and the endless scroll of
-              potential matches. Beneath the surface, these behaviors reveal a
-              lot about the human condition in the age of digital love.
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                Dating has never been simple, but in 2024, it feels more complex
+                than ever. From swiping right to sliding into DMs, the way we
+                meet, connect, and build relationships has fundamentally
+                changed. Technology has streamlined romance, but it’s also
+                introduced new challenges—ghosting, breadcrumbing, and the
+                endless scroll of potential matches. Beneath the surface, these
+                behaviors reveal a lot about the human condition in the age of
+                digital love.
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                15 january 2025
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 The Rise of the Swipe

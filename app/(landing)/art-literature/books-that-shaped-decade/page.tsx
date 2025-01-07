@@ -41,15 +41,21 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              Some books are like passing acquaintances—pleasant but
-              forgettable. Then there are the ones that stay with you, lingering
-              in the corners of your mind, resurfacing when you least expect it.
-              These are the books that defined the last ten years: stories that
-              don’t just entertain but challenge, provoke, and sometimes even
-              wreck you. If you’re looking for fiction (and a few raw memoirs)
-              that truly hit different, this list is for you.
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                Some books are like passing acquaintances—pleasant but
+                forgettable. Then there are the ones that stay with you,
+                lingering in the corners of your mind, resurfacing when you
+                least expect it. These are the books that defined the last ten
+                years: stories that don’t just entertain but challenge, provoke,
+                and sometimes even wreck you. If you’re looking for fiction (and
+                a few raw memoirs) that truly hit different, this list is for
+                you.
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                12 December 2024
+              </p>
+            </div>
             <div className="flex flex-col gap-[12px] sm:grid sm:grid-cols-8">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 Sally Rooney’s Normal People

@@ -44,15 +44,20 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              We live in a world that feels like it’s holding its breath—where
-              wealth and opportunity teeter on a razor’s edge, and the gap
-              between the haves and have-nots widens into a chasm. Social
-              inequality isn’t just a buzzword; it’s the underpinning of every
-              fractured system, every protest, every movement demanding more.
-              And yet, how do we confront something so embedded in our
-              collective reality?
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                We live in a world that feels like it’s holding its breath—where
+                wealth and opportunity teeter on a razor’s edge, and the gap
+                between the haves and have-nots widens into a chasm. Social
+                inequality isn’t just a buzzword; it’s the underpinning of every
+                fractured system, every protest, every movement demanding more.
+                And yet, how do we confront something so embedded in our
+                collective reality?
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                18 December 2024
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 The Unseen Divides

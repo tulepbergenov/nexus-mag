@@ -41,25 +41,31 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              Poor Artists isn’t just a book—it’s a manifesto, a critique, and a
-              much-needed wake-up call. Written by Gabrielle de la Puente and
-              Zarina Muhammad, the duo behind The White Pube, this hybrid work
-              of fiction and real-world commentary tears apart the glossy facade
-              of the art world to expose its cracks. Through the fictional lens
-              of Quest Talukdar—a young British South Asian artist struggling to
-              make sense of her place in an industry obsessed with aesthetics
-              and profit—the book is an uncompromising exploration of the
-              systemic inequalities that define contemporary art.
-              <br />
-              <br />
-              But don’t be fooled into thinking Poor Artists is a standard
-              critique. This is The White Pube we’re talking about: irreverent,
-              witty, and unapologetically sharp. The book blends interviews with
-              real artists—including Turner Prize winners—with Quest’s fictional
-              narrative, creating a kaleidoscopic portrait of an industry that
-              simultaneously inspires and alienates.
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                Poor Artists isn’t just a book—it’s a manifesto, a critique, and
+                a much-needed wake-up call. Written by Gabrielle de la Puente
+                and Zarina Muhammad, the duo behind The White Pube, this hybrid
+                work of fiction and real-world commentary tears apart the glossy
+                facade of the art world to expose its cracks. Through the
+                fictional lens of Quest Talukdar—a young British South Asian
+                artist struggling to make sense of her place in an industry
+                obsessed with aesthetics and profit—the book is an
+                uncompromising exploration of the systemic inequalities that
+                define contemporary art.
+                <br />
+                <br />
+                But don’t be fooled into thinking Poor Artists is a standard
+                critique. This is The White Pube we’re talking about:
+                irreverent, witty, and unapologetically sharp. The book blends
+                interviews with real artists—including Turner Prize winners—with
+                Quest’s fictional narrative, creating a kaleidoscopic portrait
+                of an industry that simultaneously inspires and alienates.
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                28 December 2024
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 Unpacking the Narrative

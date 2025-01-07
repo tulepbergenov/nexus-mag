@@ -37,16 +37,22 @@ const Page = () => {
             />
           </header>
           <div className="flex flex-col gap-y-[24px] md:gap-y-[48px]">
-            <p className="max-w-[500px] italic">
-              In an era where the internet has dissolved borders, cultural
-              exchange feels inevitable—and limitless. We scroll through recipes
-              from Thailand, dance challenges from Nigeria, and art
-              installations from Mexico, all within the span of minutes. This
-              global connectivity has opened doors to stories, traditions, and
-              perspectives that were once inaccessible. But in the process,
-              something has shifted: authenticity often gives way to aesthetics,
-              and meaning is too often reduced to marketable trends.
-            </p>
+            <div className="flex flex-wrap items-start justify-between gap-[12px]">
+              <p className="order-2 max-w-[500px] italic sm:order-1">
+                In an era where the internet has dissolved borders, cultural
+                exchange feels inevitable—and limitless. We scroll through
+                recipes from Thailand, dance challenges from Nigeria, and art
+                installations from Mexico, all within the span of minutes. This
+                global connectivity has opened doors to stories, traditions, and
+                perspectives that were once inaccessible. But in the process,
+                something has shifted: authenticity often gives way to
+                aesthetics, and meaning is too often reduced to marketable
+                trends.
+              </p>
+              <p className="order-1 font-bold uppercase sm:order-2">
+                2 December 2024
+              </p>
+            </div>
             <div className="flex w-full flex-col gap-y-[12px]">
               <h2 className="col-span-full text-2xl font-bold uppercase">
                 The Power of Global Connectivity
