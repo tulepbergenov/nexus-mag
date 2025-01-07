@@ -13,10 +13,10 @@ const SearchPage = () => {
           </header>
           <Suspense
             fallback={
-              <div className="grid grid-cols-3 gap-[24px]">
+              <div className="grid gap-[24px] sm:grid-cols-3">
                 {Array.from({ length: 6 }).map((_, index) => (
                   <div
-                    className="h-[176px] w-full animate-pulse bg-[#D9D9D9]"
+                    className="aspect-1 w-full animate-pulse bg-[#D9D9D9] sm:h-[176px]"
                     key={index}
                   ></div>
                 ))}
