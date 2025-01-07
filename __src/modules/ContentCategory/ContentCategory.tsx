@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/shared/libs";
+import { NexusLink } from "@/shared/ui-kit";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -44,11 +45,12 @@ export const ContentCategory = ({
       <div className="grid gap-[24px] sm:grid-cols-3">
         {articles.map((article) => (
           <article
-            className="cursor-pointer"
+            className="group cursor-pointer"
             key={article.href}
             onClick={() => handleToArticle(article.href)}
+            tabIndex={0}
           >
-            <div className="aspect-1 h-auto w-full overflow-hidden sm:aspect-[auto] sm:h-[140px]">
+            <div className="relative aspect-1 h-auto w-full overflow-hidden sm:aspect-[auto] sm:h-[140px]">
               <Image
                 alt={article.title}
                 height={250}
@@ -61,16 +63,17 @@ export const ContentCategory = ({
                 }}
                 width={464}
               />
+              <div className="absolute inset-0 bg-[#FF0004] opacity-0 transition-opacity duration-300 ease-in-out group-active:opacity-60 [@media(hover:hover)]:group-hover:opacity-60"></div>
             </div>
             <h2
               className={cn(
-                "mt-[12px] line-clamp-3 text-3xl font-medium uppercase -tracking-[0.1em]",
+                "mt-[12px] line-clamp-3 text-3xl font-medium uppercase -tracking-[0.1em] transition-colors duration-300 ease-in-out group-active:text-[#FF0004] [@media(hover:hover)]:group-hover:text-[#FF0004]",
                 {
                   ["dark:text-white"]: color === "#050505",
                 },
               )}
             >
-              {article.title}
+              <NexusLink href={article.href}>{article.title}</NexusLink>
             </h2>
           </article>
         ))}

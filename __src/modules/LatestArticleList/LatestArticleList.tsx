@@ -78,11 +78,12 @@ export const LatestArticleList = ({
       <div className="grid gap-[24px] md:grid-cols-3">
         {articles.map((item) => (
           <article
-            className="cursor-pointer"
+            className="group cursor-pointer"
             key={item.href}
             onClick={() => handleToArticle(item.href)}
+            tabIndex={0}
           >
-            <div className="h-[240px] overflow-hidden bg-black md:h-[140px]">
+            <div className="relative h-[240px] overflow-hidden bg-black md:h-[140px]">
               <Image
                 alt={item.title}
                 className="bg-[#D9D9D9]"
@@ -95,12 +96,13 @@ export const LatestArticleList = ({
                 }}
                 width={300}
               />
+              <div className="absolute inset-0 bg-[#FF0004] opacity-0 transition-opacity duration-300 ease-in-out group-active:opacity-60 [@media(hover:hover)]:group-hover:opacity-60"></div>
             </div>
             <div className="mt-[12px] uppercase">
-              <p className="line-clamp-1 pl-[20px] font-medium text-[#757373] dark:text-white/80">
+              <p className="line-clamp-1 pl-[20px] font-medium text-[#757373] transition-colors duration-300 ease-in-out group-active:text-[#FF0004] dark:text-white/80 [@media(hover:hover)]:group-hover:text-[#FF0004]">
                 {item.category}
               </p>
-              <h3 className="mt-[6px] line-clamp-2 font-bold">
+              <h3 className="mt-[6px] line-clamp-2 font-bold transition-colors duration-300 ease-in-out group-active:text-[#FF0004] [@media(hover:hover)]:group-hover:text-[#FF0004]">
                 <NexusLink href={item.href}>{item.title}</NexusLink>
               </h3>
             </div>

@@ -17,7 +17,7 @@ export const HeaderBar = () => {
             className="mx-auto inline-block h-[40px] overflow-hidden"
             href={"/"}
           >
-            <span className="inline-block -translate-y-[11px] font-test-manuka text-[54px] font-semibold lowercase leading-none">
+            <span className="inline-block -translate-y-[11px] font-test-manuka text-[54px] font-semibold lowercase leading-none transition-colors duration-300 ease-in-out active:text-[#FF0004] [@media(hover:hover)]:hover:text-[#FF0004]">
               nexus
             </span>
           </NexusLink>

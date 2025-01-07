@@ -4,10 +4,11 @@ import { cn } from "@/shared/libs";
 import { Categories } from "@/shared/types";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const ARTICLE_ITEMS: {
@@ -50,6 +51,12 @@ const ARTICLE_ITEMS: {
 ];
 
 export const HeroSection = () => {
+  const router = useRouter();
+
+  const handleArticleClick = (href: string) => {
+    router.push(href);
+  };
+
   return (
     <section>
       <div className="container">
@@ -59,7 +66,12 @@ export const HeroSection = () => {
           </header>
           <div className="relative">
             <Swiper
-              modules={[Navigation]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              modules={[Navigation, Autoplay]}
               navigation={{
                 nextEl: `.hero-swiper-next-btn`,
                 prevEl: `.hero-swiper-prev-btn`,
@@ -67,8 +79,11 @@ export const HeroSection = () => {
             >
               {ARTICLE_ITEMS.map((slide) => (
                 <SwiperSlide key={slide.href}>
-                  <div>
-                    <div className="h-[360px] w-full overflow-hidden sm:h-[500px]">
+                  <div
+                    className="group cursor-pointer"
+                    onClick={() => handleArticleClick(slide.href)}
+                  >
+                    <div className="relative h-[360px] w-full overflow-hidden sm:h-[500px]">
                       <Image
                         alt={slide.title}
                         className="bg-[#D9D9D9]"
@@ -83,14 +98,15 @@ export const HeroSection = () => {
                         }}
                         width={764}
                       />
+                      <div className="absolute inset-0 bg-[#FF0004] opacity-0 transition-opacity duration-300 ease-in-out group-active:opacity-60 [@media(hover:hover)]:group-hover:opacity-60"></div>
                     </div>
                     <div className="mt-[12px] flex flex-col items-start gap-[12px] sm:grid sm:grid-cols-8">
-                      <h2 className="order-2 col-span-5 text-4xl font-medium uppercase leading-none -tracking-[0.1em] sm:order-1 sm:line-clamp-3">
+                      <h2 className="order-2 col-span-5 text-4xl font-medium uppercase leading-none -tracking-[0.1em] transition-colors duration-300 ease-in-out group-active:text-[#FF0004] sm:order-1 sm:line-clamp-3 dark:text-white/80 [@media(hover:hover)]:group-hover:text-[#FF0004]">
                         {slide.title}
                       </h2>
                       <div className="order-1 col-span-3 sm:order-2">
                         <Link
-                          className="flex w-max items-center justify-center rounded-[32px] border border-[#050505] px-[12px] py-[6px] text-sm font-bold uppercase transition-colors duration-300 ease-in-out active:border-[#FF0004] active:text-[#FF0004] sm:ml-auto dark:border-white [@media(hover:hover)]:hover:border-[#FF0004] [@media(hover:hover)]:hover:text-[#FF0004]"
+                          className="flex w-max items-center justify-center rounded-[32px] border border-[#050505] px-[12px] py-[6px] text-sm font-bold uppercase transition-colors duration-300 ease-in-out group-active:border-[#FF0004] group-active:text-[#FF0004] sm:ml-auto dark:text-white/80 [@media(hover:hover)]:group-hover:border-[#FF0004] [@media(hover:hover)]:group-hover:text-[#FF0004]"
                           href={slide.href}
                         >
                           {slide.category}
