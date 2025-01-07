@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { ErrorMessage } from "@/components";
+import { Suspense, useEffect } from "react";
 
 const Error = ({
   error,
@@ -10,15 +11,16 @@ const Error = ({
   reset: () => void;
 }) => {
   useEffect(() => {
-    console.error(error);
+    console.error("Error captured:", error);
   }, [error]);
 
   return (
     <section>
       <div className="container">
-        <div className="py-[32px]">
-          <p>Something went wrong!</p>
-          <button onClick={() => reset()}>Try again</button>
+        <div className="py-[24px] sm:py-[48px]">
+          <Suspense fallback={null}>
+            <ErrorMessage reset={reset} />
+          </Suspense>
         </div>
       </div>
     </section>

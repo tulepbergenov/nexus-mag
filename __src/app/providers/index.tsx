@@ -1,6 +1,11 @@
-import { LayoutType } from "@/shared/types";
+import type { LayoutType } from "@/shared/types";
+import { ThemeProvider } from "./ThemeProvider";
 import { WrapBalancerProvider } from "./WrapBalancerProvider";
 
 export const Providers = ({ children }: LayoutType) => {
-  return <WrapBalancerProvider>{children}</WrapBalancerProvider>;
+  return (
+    <ThemeProvider>
+      <WrapBalancerProvider>{children}</WrapBalancerProvider>
+    </ThemeProvider>
+  );
 };

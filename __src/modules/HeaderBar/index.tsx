@@ -1,15 +1,17 @@
+import { ThemeToggler } from "@/components";
 import { NexusLink } from "@/shared/ui-kit";
 import { AiFillInstagram } from "react-icons/ai";
 import { MenuDrawer, SearchModal } from "./components";
 
 export const HeaderBar = () => {
   return (
-    <header className="sticky top-0 z-40 w-full bg-white">
+    <header className="sticky top-0 z-40 w-full bg-white dark:bg-[#050505]">
       <div className="mx-auto px-[24px]">
-        <div className="grid grid-cols-3 items-center border-b border-b-[#050505] py-[8px]">
+        <div className="grid grid-cols-3 items-center border-b border-b-[#050505] py-[8px] dark:border-b-white">
           <div className="flex items-center gap-x-[24px]">
             <MenuDrawer />
             <SearchModal triggerClassName="hidden md:inline-block" />
+            <ThemeToggler className="hidden md:flex" />
           </div>
           <NexusLink
             className="mx-auto inline-block h-[40px] overflow-hidden"

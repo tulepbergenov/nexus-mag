@@ -1,5 +1,6 @@
 "use client";
 
+import { Categories } from "@/shared/types";
 import { NexusLink } from "@/shared/ui-kit";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { AnimatePresence } from "motion/react";
@@ -18,12 +19,12 @@ const MENU_LINKS: {
   {
     label: (
       <span>
-        <span>Literature & </span>
+        <span>art &</span>
         <br />
-        <span>art</span>
+        <span>Literature </span>
       </span>
     ),
-    href: "/literature-art",
+    href: Categories.ArtLiterature,
   },
   {
     label: (
@@ -33,7 +34,7 @@ const MENU_LINKS: {
         <span>Social issues</span>
       </span>
     ),
-    href: "/sociology-social-issues",
+    href: Categories.SociologySocialIssues,
   },
   {
     label: (
@@ -43,17 +44,17 @@ const MENU_LINKS: {
         <span>identity</span>
       </span>
     ),
-    href: "/culture-identity",
+    href: Categories.CultureIdentity,
   },
   {
     label: (
       <span>
-        <span>Psychology &</span>
+        <span>Human</span>
         <br />
-        <span>human behaviour</span>
+        <span>behaviour</span>
       </span>
     ),
-    href: "/psychology-human-behaviour",
+    href: Categories.HumanBehaviour,
   },
 ];
 
@@ -75,8 +76,8 @@ export const MenuDrawer = () => {
         onClick={handleOpenDrawer}
         type="button"
       >
-        <span className="inline-block h-[4px] w-[30px] bg-[#050505] transition-colors duration-300 ease-in-out group-active:bg-[#FF0004] [@media(hover:hover)]:group-hover:bg-[#FF0004]"></span>
-        <span className="inline-block h-[4px] w-[30px] bg-[#050505] transition-colors duration-300 ease-in-out group-active:bg-[#FF0004] [@media(hover:hover)]:group-hover:bg-[#FF0004]"></span>
+        <span className="inline-block h-[4px] w-[30px] bg-[#050505] transition-colors duration-300 ease-in-out group-active:bg-[#FF0004] dark:bg-white [@media(hover:hover)]:group-hover:bg-[#FF0004]"></span>
+        <span className="inline-block h-[4px] w-[30px] bg-[#050505] transition-colors duration-300 ease-in-out group-active:bg-[#FF0004] dark:bg-white [@media(hover:hover)]:group-hover:bg-[#FF0004]"></span>
         <span className="sr-only">Open menu</span>
       </button>
       <AnimatePresence initial={false} mode="wait">

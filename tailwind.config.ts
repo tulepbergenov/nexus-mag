@@ -2,6 +2,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
+  darkMode: ["selector", '[data-theme="dark"]'],
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./__src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -29,6 +30,10 @@ export default {
     container: {
       center: true,
       padding: "24px",
+      screens: {
+        sm: "640px",
+        md: "768px",
+      },
     },
   },
   plugins: [

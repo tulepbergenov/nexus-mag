@@ -38,12 +38,12 @@ const RootLayout = ({
         testUntitledFont.variable,
         interTightFont.variable,
         sofiaSansExtraCondensedFont.variable,
-        "h-full !scroll-smooth",
+        "h-full !scroll-smooth [color-scheme:light] [&_*::selection]:bg-[#FF0004] [&_*::selection]:text-white",
       )}
       lang="en"
       suppressHydrationWarning
     >
-      <body className="h-full text-balance bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-[#050505] antialiased rendering-speed">
+      <body className="h-full bg-white font-test-untitled text-[16px] font-normal leading-[21px] text-[#050505] antialiased rendering-speed dark:bg-[#050505] dark:text-white [&::-webkit-scrollbar-thumb]:bg-[#FF0004] [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar]:w-[8px]">
         <Providers>
           <div className="flex min-h-full flex-col overflow-clip pb-[100px]">
             <SkipLink />

@@ -1,31 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  html {
-    color-scheme: light;
-  }
-
-  *::selection {
-    @apply bg-[#FF0004] text-white;
-  }
-
-  body::-webkit-scrollbar {
-    @apply w-[8px];
-  }
-
-  body::-webkit-scrollbar-thumb {
-    @apply bg-[#FF0004];
-  }
-
-  body::-webkit-scrollbar-track {
-    @apply bg-transparent;
-  }
-}
-
-@layer components {
-  .container {
-    @apply md:max-w-screen-md;
-  }
-}
