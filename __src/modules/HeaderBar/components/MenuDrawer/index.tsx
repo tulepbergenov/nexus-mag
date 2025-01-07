@@ -1,12 +1,14 @@
 "use client";
 
+import { cn } from "@/shared/libs";
 import { Categories } from "@/shared/types";
 import { NexusLink } from "@/shared/ui-kit";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
+import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 const MENU_LINKS: {
   label: ReactNode;
@@ -60,6 +62,14 @@ const MENU_LINKS: {
 
 export const MenuDrawer = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const pathname = usePathname();
+
+  const handleIsCurrentPage = useCallback(
+    (href: string) => {
+      return pathname === href || pathname.startsWith(href);
+    },
+    [pathname],
+  );
 
   const handleOpenDrawer = () => {
     setIsDrawerOpen(true);
@@ -138,7 +148,14 @@ export const MenuDrawer = () => {
                     {MENU_LINKS.map((menuLink) => (
                       <li className="flex" key={menuLink.href}>
                         <NexusLink
-                          className="inline-block text-[24px] font-medium uppercase leading-none -tracking-[2px] transition-colors duration-300 ease-in-out active:text-[#FF0004] [@media(hover:hover)]:hover:text-[#FF0004]"
+                          className={cn(
+                            "inline-block text-[24px] font-medium uppercase leading-none -tracking-[2px] transition-colors duration-300 ease-in-out active:text-[#FF0004] [@media(hover:hover)]:hover:text-[#FF0004]",
+                            {
+                              "text-[#FF0004]": handleIsCurrentPage(
+                                menuLink.href,
+                              ),
+                            },
+                          )}
                           href={menuLink.href}
                           onClick={handleCloseDrawer}
                         >
