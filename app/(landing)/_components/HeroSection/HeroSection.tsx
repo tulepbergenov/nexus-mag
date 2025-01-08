@@ -39,7 +39,7 @@ const ARTICLE_ITEMS: {
   {
     title: "Dating in 2024: Navigating Modern Romance",
     category: "human behaviour",
-    href: `${Categories.ArtLiterature}/dating-2024-modern-romance`,
+    href: `${Categories.HumanBehaviour}/dating-2024-modern-romance`,
     cover: "/articles/dating-2024-modern-romance/1.jpg",
   },
   {
